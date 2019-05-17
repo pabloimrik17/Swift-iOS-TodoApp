@@ -17,7 +17,7 @@ class ChecklistViewController: UITableViewController {
     
     // Devuelve el numero de filas de la tabla
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return 1000
     }
     
     // Establece el contenido con el que se visualiza cada columna de la fila.
@@ -25,10 +25,16 @@ class ChecklistViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ChecklistItem", for: indexPath)
         
         if let label = cell.viewWithTag(1000) as? UILabel {
-            if indexPath.row == 0 {
-                label.text = "Run a maraton"
-            } else {
-                label.text = "Sleep"
+            if indexPath.row % 5 == 0 {
+                label.text = "Take a jog"
+            } else if indexPath.row % 5 == 1 {
+                label.text = "Watch a movie"
+            } else if indexPath.row % 5 == 2 {
+                label.text = "Code an App"
+            } else if indexPath.row % 5 == 3 {
+                label.text = "Walk the dog"
+            } else if indexPath.row % 5 == 0 {
+                label.text = "Study design patterns"
             }
         }
         
