@@ -9,14 +9,16 @@
 import Foundation
 
 class TodoList {
-    var todos: [ChecklistItemModel] = []
+    private let tittles = ["A", "B", "C"]
+    
+    var todos: [CheckListItem] = []
     
     init() { 
-        let row0Item = ChecklistItemModel()
-        let row1Item = ChecklistItemModel()
-        let row2Item = ChecklistItemModel()
-        let row3Item = ChecklistItemModel()
-        let row4Item = ChecklistItemModel()
+        let row0Item = CheckListItem()
+        let row1Item = CheckListItem()
+        let row2Item = CheckListItem()
+        let row3Item = CheckListItem()
+        let row4Item = CheckListItem()
         
         row0Item.text = "Take a jog"
         row1Item.text = "Watch a movie"
@@ -31,12 +33,19 @@ class TodoList {
         todos.append(row4Item)
     }
     
-    func newTodo() -> ChecklistItemModel {
-        let item = ChecklistItemModel()
-        item.text = "New todo item"
+    func newTodo() -> CheckListItem {
+        let item = CheckListItem()
+        item.text = self.randomTitle()
+        item.checked = true
         
         todos.append(item)
         
         return item
+    }
+    
+    private func randomTitle() -> String {
+        let randomNumber = Int.random(in: 0 ... tittles.count - 1)
+        
+        return tittles[randomNumber]
     }
 }

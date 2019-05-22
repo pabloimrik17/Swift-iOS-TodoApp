@@ -56,17 +56,17 @@ class ChecklistViewController: UITableViewController {
         }
     }
     
-    func configureLabel(for cell: UITableViewCell, with item: ChecklistItemModel) {
+    func configureLabel(for cell: UITableViewCell, with item: CheckListItem) {
         if let label = cell.viewWithTag(1000) as? UILabel {
             label.text = item.text
         }
     }
     
-    func configureCheckmark(for cell: UITableViewCell, with item: ChecklistItemModel) {
+    func configureCheckmark(for cell: UITableViewCell, with item: CheckListItem) {
         if item.checked { 
-            cell.accessoryType = .none
-        } else {
             cell.accessoryType = .checkmark
+        } else {
+            cell.accessoryType = .none
         }
         
         item.toggle()
