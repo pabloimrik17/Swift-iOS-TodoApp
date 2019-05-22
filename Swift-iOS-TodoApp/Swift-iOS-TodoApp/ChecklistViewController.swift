@@ -20,6 +20,8 @@ class ChecklistViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        navigationController?.navigationBar.prefersLargeTitles = true
     }
     
     // Devuelve el numero de filas de la tabla
@@ -60,6 +62,10 @@ class ChecklistViewController: UITableViewController {
         }
         
         item.toggle()
+    }
+    
+    @IBAction func addItem() {
+        print("ADD")
     }
 }
 
