@@ -49,7 +49,7 @@
                     <navigationItem key="navigationItem" title="Checklists" id="nhH-CU-Io3">
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="HWS-OY-h89">
                             <connections>
-                                <action selector="addItem" destination="ZiH-yp-Kia" id="Pnl-do-fhD"/>
+                                <action selector="addTodo:" destination="ZiH-yp-Kia" id="hhT-dB-JOb"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

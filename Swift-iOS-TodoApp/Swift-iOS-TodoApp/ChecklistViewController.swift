@@ -11,6 +11,14 @@ import UIKit
 class ChecklistViewController: UITableViewController {
     var todoList: TodoList
     
+    @IBAction func addTodo(_ sender: Any) {
+        let newRowIndex = todoList.todos.count
+        _ = todoList.newTodo()
+        
+        let indexPath = IndexPath(row: newRowIndex, section: 0)
+        tableView.insertRows(at: [indexPath], with: .automatic)
+    }
+    
     required init?(coder aDecoder: NSCoder) {
         todoList = TodoList()
         
@@ -62,10 +70,6 @@ class ChecklistViewController: UITableViewController {
         }
         
         item.toggle()
-    }
-    
-    @IBAction func addItem() {
-        print("ADD")
     }
 }
 
