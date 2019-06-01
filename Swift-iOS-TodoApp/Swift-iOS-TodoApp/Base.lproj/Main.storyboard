@@ -77,12 +77,16 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Glx-6b-3bA">
-                                                    <rect key="frame" x="7" y="6" width="97" height="30"/>
+                                                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Glx-6b-3bA">
+                                                    <rect key="frame" x="14" y="6" width="387" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <nil key="textColor"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                                    <connections>
+                                                        <action selector="add:" destination="Tnf-Vc-MZ5" eventType="editingDidEndOnExit" id="c6t-Xe-ORO"/>
+                                                        <outlet property="delegate" destination="Tnf-Vc-MZ5" id="GL8-58-KVT"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -95,16 +99,14 @@
                             <outlet property="delegate" destination="Tnf-Vc-MZ5" id="4Tf-SC-O2t"/>
                         </connections>
                     </tableView>
-                    <toolbarItems>
-                        <barButtonItem title="Item" id="y40-Uj-pAh"/>
-                    </toolbarItems>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" title="Title" id="R6G-Ka-nFP">
                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="77v-Wd-efG">
                             <connections>
                                 <action selector="cancel:" destination="Tnf-Vc-MZ5" id="Cu2-RD-6oN"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Add" id="Aeu-VY-ajj">
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" title="Add" id="Aeu-VY-ajj">
                             <connections>
                                 <action selector="add:" destination="Tnf-Vc-MZ5" id="VGv-wM-q2e"/>
                             </connections>
@@ -112,12 +114,14 @@
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="addButton" destination="Aeu-VY-ajj" id="0ow-gF-kxe"/>
+                        <outlet property="cancelButton" destination="77v-Wd-efG" id="eBo-MH-UeD"/>
                         <outlet property="textField" destination="Glx-6b-3bA" id="yoR-pg-wPK"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wbm-K8-80F" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1658" y="-442"/>
+            <point key="canvasLocation" x="1657.9710144927537" y="-442.63392857142856"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cUn-iN-qz3">
