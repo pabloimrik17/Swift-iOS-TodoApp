@@ -59,7 +59,7 @@
             </objects>
             <point key="canvasLocation" x="878" y="-439"/>
         </scene>
-        <!--Title-->
+        <!--Add Item-->
         <scene sceneID="WbT-FP-Xrd">
             <objects>
                 <tableViewController id="Tnf-Vc-MZ5" customClass="AddItemTableViewController" customModule="Swift_iOS_TodoApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -100,7 +100,7 @@
                         </connections>
                     </tableView>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Title" id="R6G-Ka-nFP">
+                    <navigationItem key="navigationItem" title="Add Item" id="R6G-Ka-nFP">
                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="77v-Wd-efG">
                             <connections>
                                 <action selector="cancel:" destination="Tnf-Vc-MZ5" id="Cu2-RD-6oN"/>
