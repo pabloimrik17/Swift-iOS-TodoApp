@@ -15,13 +15,17 @@ protocol AddItemViewControllerDelegate: class {
 
 class AddItemTableViewController: UITableViewController {
     weak var delegate: AddItemViewControllerDelegate?
+    
+    weak var todoList: TodoList?
+    weak var itemToEdit: CheckListItem?
 
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var addButton: UIBarButtonItem!
     @IBOutlet weak var cancelButton: UIBarButtonItem!
     
     @IBAction func cancel(_ sender: Any) {
-        navigationController?.popViewController(animated: true)
+        navigationController?.popViewController(animated:
+            true)
         delegate?.addItemViewControllerDidCancel(self)
     }
     
@@ -37,6 +41,12 @@ class AddItemTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if let item = itemToEdit {
+            title = "Edit Item"
+            textField.text = item.text
+            addButton.isEnabled = true
+        }
         
         navigationItem.largeTitleDisplayMode = .never
     }
