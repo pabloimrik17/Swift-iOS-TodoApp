@@ -18,25 +18,39 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="checkmark" indentationWidth="10" reuseIdentifier="ChecklistItem" id="Um0-jT-v2g">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="detailDisclosureButton" indentationWidth="10" reuseIdentifier="ChecklistItem" id="Um0-jT-v2g">
                                 <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Um0-jT-v2g" id="ufi-Wp-ca8">
-                                    <rect key="frame" x="0.0" y="0.0" width="370" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="1001" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="√" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4CR-Wi-gMt">
+                                            <rect key="frame" x="20" y="12" width="25" height="20"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="25" id="bmJ-L1-FD9"/>
+                                                <constraint firstAttribute="height" constant="20" id="ped-21-ccX"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="1000" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v7a-7S-GUi">
-                                            <rect key="frame" x="20" y="11" width="330" height="21"/>
+                                            <rect key="frame" x="61" y="12" width="273" height="22"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="trailing" secondItem="v7a-7S-GUi" secondAttribute="trailing" constant="20" symbolic="YES" id="EGm-gz-Nen"/>
-                                        <constraint firstItem="v7a-7S-GUi" firstAttribute="top" secondItem="ufi-Wp-ca8" secondAttribute="top" priority="750" constant="11" id="JnX-2K-NAB"/>
-                                        <constraint firstItem="v7a-7S-GUi" firstAttribute="leading" secondItem="ufi-Wp-ca8" secondAttribute="leading" constant="20" symbolic="YES" id="L2g-Dl-77R"/>
-                                        <constraint firstAttribute="bottom" secondItem="v7a-7S-GUi" secondAttribute="bottom" priority="750" constant="11.5" id="Wg7-eX-ggy"/>
+                                        <constraint firstItem="v7a-7S-GUi" firstAttribute="bottom" secondItem="ufi-Wp-ca8" secondAttribute="bottomMargin" constant="1" id="6kP-Zq-80p"/>
+                                        <constraint firstItem="4CR-Wi-gMt" firstAttribute="top" secondItem="ufi-Wp-ca8" secondAttribute="topMargin" constant="1" id="S76-Sa-p2c"/>
+                                        <constraint firstItem="v7a-7S-GUi" firstAttribute="top" secondItem="ufi-Wp-ca8" secondAttribute="topMargin" constant="1" id="c6c-0i-Kw1"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="4CR-Wi-gMt" secondAttribute="bottom" constant="1" id="ei5-n2-K3g"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="4CR-Wi-gMt" secondAttribute="trailing" constant="289" id="gV2-8F-n7l"/>
+                                        <constraint firstItem="v7a-7S-GUi" firstAttribute="trailing" secondItem="ufi-Wp-ca8" secondAttribute="trailingMargin" id="jI6-Bo-86i"/>
+                                        <constraint firstItem="4CR-Wi-gMt" firstAttribute="leading" secondItem="ufi-Wp-ca8" secondAttribute="leadingMargin" id="sgJ-D0-12o"/>
+                                        <constraint firstItem="v7a-7S-GUi" firstAttribute="leading" secondItem="ufi-Wp-ca8" secondAttribute="leadingMargin" constant="41" id="va6-Oy-M3T"/>
                                     </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -47,7 +61,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Checklists" id="nhH-CU-Io3">
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="HWS-OY-h89">
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="add" id="HWS-OY-h89">
                             <connections>
                                 <segue destination="Tnf-Vc-MZ5" kind="show" identifier="AddItemSegue" id="pPj-B2-yiE"/>
                             </connections>
@@ -57,7 +71,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yvX-wS-4wH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="878" y="-439"/>
+            <point key="canvasLocation" x="876.81159420289862" y="-439.28571428571428"/>
         </scene>
         <!--Add Item-->
         <scene sceneID="WbT-FP-Xrd">
