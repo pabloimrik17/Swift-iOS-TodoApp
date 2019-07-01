@@ -79,7 +79,7 @@
         <!--Add Item-->
         <scene sceneID="WbT-FP-Xrd">
             <objects>
-                <tableViewController id="Tnf-Vc-MZ5" customClass="AddItemTableViewController" customModule="Swift_iOS_TodoApp" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="Tnf-Vc-MZ5" customClass="ItemDetailView" customModule="Swift_iOS_TodoApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" delaysContentTouches="NO" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="IhA-uT-HPX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

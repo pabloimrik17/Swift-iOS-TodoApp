@@ -9,11 +9,12 @@
 import UIKit
 
 protocol AddItemViewControllerDelegate: class {
-    func addItemViewControllerDidCancel (_ controller: AddItemTableViewController)
-    func addItemViewController(_ controller: AddItemTableViewController, didFinishAdding item: CheckListItem)
+    func addItemViewControllerDidCancel (_ controller: ItemDetailView)
+    func addItemViewController(_ controller: ItemDetailView, didFinishAdding item: CheckListItem)
+    func addItemViewController(_ controller: ItemDetailView, didFinishEditing item: CheckListItem)
 }
 
-class AddItemTableViewController: UITableViewController {
+class ItemDetailView: UITableViewController {
     weak var delegate: AddItemViewControllerDelegate?
     
     weak var todoList: TodoList?
@@ -24,19 +25,23 @@ class AddItemTableViewController: UITableViewController {
     @IBOutlet weak var cancelButton: UIBarButtonItem!
     
     @IBAction func cancel(_ sender: Any) {
-        navigationController?.popViewController(animated:
-            true)
         delegate?.addItemViewControllerDidCancel(self)
     }
     
     @IBAction func add(_ sender: Any) {
-        let item = CheckListItem()
-        if let textField = textField.text {
-            item.text = textField
+        if let item = itemToEdit, let text = textField.text {
+            item.text = text
+            delegate?.addItemViewController(self, didFinishEditing: item)
+        } else {
+            if let item = todoList?.newTodo() {
+                if let textField = textField.text {
+                    item.text = textField
+                }
+                
+                item.checked = false
+                delegate?.addItemViewController(self, didFinishAdding: item)
+            }
         }
-        
-        item.checked = false
-        delegate?.addItemViewController(self, didFinishAdding: item)
     }
     
     override func viewDidLoad() {
@@ -60,7 +65,7 @@ class AddItemTableViewController: UITableViewController {
     }
 }
 
-extension AddItemTableViewController: UITextFieldDelegate {
+extension ItemDetailView: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return false

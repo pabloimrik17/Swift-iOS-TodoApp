@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FC9B1D9A22A0719800E4B205 /* AddItemTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9B1D9922A0719800E4B205 /* AddItemTableViewController.swift */; };
+		FC9B1D9A22A0719800E4B205 /* ItemDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9B1D9922A0719800E4B205 /* ItemDetailView.swift */; };
 		FCCB4D172290037B00E2695F /* CheckListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCB4D162290037B00E2695F /* CheckListItem.swift */; };
 		FCCB4D1922900EC900E2695F /* TodoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCB4D1822900EC900E2695F /* TodoList.swift */; };
 		FCD0DF2B228A0885008E62B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD0DF2A228A0885008E62B4 /* AppDelegate.swift */; };
@@ -18,7 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		FC9B1D9922A0719800E4B205 /* AddItemTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemTableViewController.swift; sourceTree = "<group>"; };
+		FC9B1D9922A0719800E4B205 /* ItemDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailView.swift; sourceTree = "<group>"; };
 		FCCB4D162290037B00E2695F /* CheckListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckListItem.swift; sourceTree = "<group>"; };
 		FCCB4D1822900EC900E2695F /* TodoList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoList.swift; sourceTree = "<group>"; };
 		FCD0DF27228A0885008E62B4 /* Swift-iOS-TodoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Swift-iOS-TodoApp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -68,7 +68,7 @@
 				FCD0DF31228A0886008E62B4 /* Assets.xcassets */,
 				FCD0DF33228A0886008E62B4 /* LaunchScreen.storyboard */,
 				FCD0DF36228A0886008E62B4 /* Info.plist */,
-				FC9B1D9922A0719800E4B205 /* AddItemTableViewController.swift */,
+				FC9B1D9922A0719800E4B205 /* ItemDetailView.swift */,
 			);
 			path = "Swift-iOS-TodoApp";
 			sourceTree = "<group>";
@@ -145,7 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FCD0DF2D228A0885008E62B4 /* ChecklistViewController.swift in Sources */,
-				FC9B1D9A22A0719800E4B205 /* AddItemTableViewController.swift in Sources */,
+				FC9B1D9A22A0719800E4B205 /* ItemDetailView.swift in Sources */,
 				FCCB4D172290037B00E2695F /* CheckListItem.swift in Sources */,
 				FCD0DF2B228A0885008E62B4 /* AppDelegate.swift in Sources */,
 				FCCB4D1922900EC900E2695F /* TodoList.swift in Sources */,
